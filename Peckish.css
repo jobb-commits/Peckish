@@ -1,0 +1,41 @@
+img {
+    width: 100vw;   /* Full width of the viewport */
+    height: 50vh;   /* Half the height of the viewport */
+    object-fit: cover;  /* Ensures the image covers the area without stretching */
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Fullscreen image setup */
+img {
+    width: 100vw;       /* Full width of the viewport */
+    height: 50vh;       /* Half the height of the viewport */
+    object-fit: cover;  /* Ensures image covers area without stretching */
+    display: block;     /* Prevents bottom margin in some browsers */
+}
+
+/* Container for the text (title + paragraph) */
+.content-container {
+    display: flex;
+    justify-content: space-between;  /* Distributes space between items */
+    align-items: flex-start;         /* Aligns title and paragraph to the top */
+    padding: 20px;
+    box-sizing: border-box;          /* Ensures padding doesn't break layout */
+}
+
+/* Title styling */
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;  /* Adds space between the image and title */
+    width: 45%;        /* Title takes up 45% of the container's width */
+}
+
+/* Paragraph styling */
+.paragraph {
+    font-size: 14px;
+    width: 50%;        /* Paragraph takes up the other 50% */
+    line-height: 1.6;  /* Increases line height for readability */
+}

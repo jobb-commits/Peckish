@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peckish Home</title>
+    <style>
+        /* Basic reset and margin */
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size:large;
+            line-height: 1.6;
+        }
+
+
+        /* Fullscreen image setup */
+        img {
+            width: 100vw;
+            height: 50vh;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Text Container with Title and Paragraph */
+        .content-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+        }
+
+         /* Image grid setup */
+         .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2-column grid */
+            gap: 20px;
+            width: 50%;        
+            margin-top: 20px;   /* Space between the paragraph and grid */
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+            width: 50%;
+        }
+
+        .paragraph {
+            font-size: large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 50%;
+            line-height: 1.6;
+        }
+
+        /* Services section */
+        .services-section {
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        .services-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .service {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Best Selling Items Section */
+        .best-selling-section {
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        .best-selling-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .best-selling-items {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .best-selling-item {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 22%;
+            text-align: center;
+        }
+
+        .best-selling-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .best-selling-item h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .best-selling-item .price {
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Newsletter Subscription Section */
+        .newsletter-section {
+            background-color: #f8f8f8;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .newsletter-section h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            width: 70%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .newsletter-button {
+            padding: 12px 20px;
+            background-color: #bd6818;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .newsletter-button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .newsletter-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Image Section -->
+    <img src="peckish-high-resolution-logo (1).png" alt="peckish-high-resolution-logo">
+
+    <!-- Content Section -->
+    <div class="content-container">
+        <div class="title">
+            Welcome To Peckish!
+        </div>
+        <div class="paragraph">
+            At Peckish, we believe that dining is more than just a meal—it’s an experience. Nestled in the heart of Utawala, our restaurant offers a warm, inviting atmosphere where every detail is designed with you in mind. <br> From our carefully crafted menu to our attentive service, we aim to provide an unforgettable experience that delights the senses. Our team of chefs takes pride in using only the freshest, locally-sourced ingredients to create dishes that are both innovative and comforting. Whether you’re joining us for a casual lunch, a celebratory dinner, or a cozy brunch, you can expect flavors that tantalize and a setting that feels like home.
+        </div>
+
+         <!-- Image Grid Container -->
+         <div class="image-grid">
+            <img src="istockphoto-1343182422-612x612.jpg" alt="Image 1">
+            <img src="pizza.jpg" alt="Image 2">
+            <img src="asian-chicken-with-rice.jpg" alt="Image 3">
+            <img src="restaurant-interior.webp" alt="Image 4">
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services-section">
+        <h2>Our Services</h2>
+        <p>Explore our diverse menu featuring [highlight special dishes, e.g., artisanal pizzas, gourmet burgers, fresh seafood], and don’t miss out on our daily specials, crafted with seasonal ingredients. Our full-service bar offers a selection of handcrafted cocktails, fine wines, and local craft beers to perfectly complement your meal.
+
+            At Peckish, every guest is treated like family. Our friendly staff is dedicated to ensuring your dining experience is nothing short of exceptional. We invite you to join us and discover why we’re Utawala’s favorite spot for delicious food and great company.Below are some of the key services we provide:</p>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+            <div class="service">
+                <h3>Casual Dining</h3>
+                <p>Enjoy a relaxed meal in our warm and inviting main dining area. Our extensive menu features a mix of classic favorites and innovative dishes prepared with fresh, locally-sourced ingredients.</p>
+            </div>
+            <div class="service">
+                <h3>Fine Dining</h3>
+                <p>For a more sophisticated experience, indulge in our elegant fine dining section. Relish gourmet meals crafted by our renowned chefs, paired with a curated selection of wines.</p>
+            </div>
+            <div class="service">
+                <h3>Catering</h3>
+                <p>Let us bring the Peckish experience to you. Our catering services are ideal for corporate events, weddings, and private parties. Customize your menu to fit your event’s theme and dietary needs.</p>
+            </div>
+            <div class="service">
+                <h3>Cooking Classes</h3>
+                <p>Join us for interactive cooking classes and learn to create your favorite dishes under the guidance of our expert chefs. Great for individuals or groups!
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Best Selling Items Section -->
+    <div class="best-selling-section">
+        <h2>Best Sellers</h2>
+        <p>Check out our most popular products, loved by our customers:</p>
+
+        <div class="best-selling-items">
+            <div class="best-selling-item">
+                <img src= "istockphoto-496389174-612x612.jpg"alt="Peckish Big Burger">
+                <h3>The Peckish Deluxe</h3>
+                <p class="price">Ksh 720</p>
+            </div>
+            <div class="best-selling-item">
+                <img src= "pork ribs.jpg"alt="Grilled Ribs">
+                <h3>Peckish Rib Royalty</h3>
+                <p class="price">Ksh 580</p>
+            </div>
+            <div class="best-selling-item">
+                <img src= "360_F_100731639_JvF0Aa6JBz10b9fHl1pILqmTIV3LV7of.jpg"alt="Grilled Salmon">
+                <h3>Peckish Grilled Salmon Delight</h3>
+                <p class="price">Ksh 480</p>
+            </div>
+            <div class="best-selling-item">
+                <img src="smoothie.webp" alt="Black Berry Smoothy">
+                <h3>Peckish Berry Burst</h3>
+                <p class="price">Ksh 170</p>
+            </div>
+            <div class="best-selling-item">
+                <img src="ice cream.webp" alt="Ice Cream">
+                <h3>Chill $ Thrill</h3>
+                <p class="price">Ksh 200</p>
+            </div>
+            <div class="best-selling-item">
+                <img src="seafood-platter.webp" alt=" Sea Food">
+                <h3>Peckish Deep Sea Delight</h3>
+                <p class="price">Ksh 1549</p>
+            </div>
+    </div>
+
+    <!-- Newsletter Subscription Section -->
+    <div class="newsletter-section">
+        <h2>Get New Content Delivered Directly to Your Inbox</h2>
+        <form class="newsletter-form" action="#" method="post">
+            <input type="email" name="email" class="newsletter-input" placeholder="Enter your email" required>
+            <button type="submit" class="newsletter-button">Subscribe</button>
+        </form>
+    </div>
+</body>
+</html>
